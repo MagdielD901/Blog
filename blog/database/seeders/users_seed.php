@@ -6,7 +6,6 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-
 class users_seed extends Seeder
 {
     /**
@@ -15,24 +14,23 @@ class users_seed extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            'name'=>'Magdiel D',
+            'name'=>'Jenny Castillo',
             'email'=>'admin@gmail.com',
             'password'=>Hash::make('123'),
-            'nickname'=>"admin",
+            'nickname'=>'admin',
             'img'=>'default.jpg',
-            "created_at"=>date('Y-m-d h:m:s')// 2025-12-12
+            'created_at'=>date("Y-m-d h:m:s")
         ]);
-            for($i=0;$i<50;$i++){
- DB::table('users')->insert([
-            'name'=>'Magdiel B'.$i,
-            'email'=>'admin'.$i.'@gmail.com',
+        for($i=0;$i>50;$i++){
+            DB::table('users')->insert([
+            'name'=>'Admin'.$i,
+            'email'=>'admin'.$i."@gmail.com",
             'password'=>Hash::make('123'),
-            'nickname'=>"admin".$i,
+            'nickname'=>'lisa'.$i,
             'img'=>'default.jpg',
-            "created_at"=>date('Y-m-d h:m:s')// 2025-12-12
+            'created_at'=>date("Y-m-d h:m:s")
         ]);
-
-            }
-       
+        }
+         
     }
 }

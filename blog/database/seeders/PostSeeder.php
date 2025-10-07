@@ -14,31 +14,26 @@ class PostSeeder extends Seeder
     public function run(): void
     {
         DB::table('posts')->insert([
-            "title"=>'Como cuidar las suculentas',
-            "description"=>"Aprende como cuidar y como regarlas",
+            "title"=>"Como cuidar las suculentas",
+            "description"=>"Aprende como cuidarlas y regarlas",
             "img"=>"default.jpg",
             "content"=>"Contenido del post",
             "likes"=>0,
             "slug"=>"Como-cuidar-suculentas",
             "user_id"=>1,
             "category_id"=>1,
-            "created_at"=>date('Y-m-d h:m:s')// 2025-12-12
-
+            "created_at"=>date("Y-m-d h:m:s")
         ]);
-
         DB::table('posts')->insert([
-            "title"=>'Como cuidar savila',
-            "description"=>"Aprende como cuidar y como regarlas",
+            "title"=>"Como cuidar la lengua de suegra",
+            "description"=>"Aprende como cuidarlas y regarlas",
             "img"=>"default.jpg",
             "content"=>"Contenido del post",
             "likes"=>0,
-            "slug"=>"Como-cuidar-savila",
+            "slug"=>"Como-cuidar-lengua-suegra",
             "user_id"=>1,
             "category_id"=>1,
-            "created_at"=>date('Y-m-d h:m:s')// 2025-12-12
-
+            "created_at"=>date("Y-m-d h:m:s")
         ]);
-
-       
     }
 }

@@ -6,24 +6,29 @@ use App\Http\Controllers\UsersController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get("/contacto",function(){
+Route::get("/contacto", function() {
     return view('contacto');
+});    
+Route::get("/post", function() {
+        return view('post');
 });
-Route::get("/post",function(){
-    return view('post');
-});
-Route::get("/about",function(){
+Route::get("/about", function() {
     return view('about');
 });
-Route::group(['prefix'=>'dashboard'],function(){
-    Route::get("/",function(){
+
+Route::group(['prefix' => 'dashboard'], function(){
+    Route::get("/", function() {
     return view('admin.dashboard');
-});
-    Route::get("/users",function(){
-    return view('admin.users');
-});
-Route::get("/users",[UsersController::class,'getUsers']);
-Route::post("/users",[UsersController::class,'createUsers']);
+    });
+    Route::get("/users",[UsersController::class,'getUsers']);
+    Route::post("/users",[UsersController::class,'createUsers']);
 });
 
 
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

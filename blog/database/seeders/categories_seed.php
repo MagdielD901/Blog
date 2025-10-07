@@ -15,19 +15,12 @@ class categories_seed extends Seeder
         DB::table('categories')->insert([
             "name"=>'Plantas',
             "img"=>"default.jpg",
-            "created_at"=>date('Y-m-d h:m:s')// 2025-12-12
-
+            'created_at'=>date('Y-m-d h:m:s')
         ]);
-
-
         DB::table('categories')->insert([
-            "name"=>'Arboles',
+            "name"=>'Arbustos',
             "img"=>"default.jpg",
-            "created_at"=>date('Y-m-d h:m:s')// 2025-12-12
-
+            'created_at'=>date('Y-m-d h:m:s')
         ]);
     }
-        
-    }
-    
-
+}
