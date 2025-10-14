@@ -54,4 +54,19 @@
             <button class="btn btn-primary">Insertar</button>
         </div>
     </form>
+
+@endsection
+
+@section("scripts")
+<script>
+     const quill = new Quill('editor', {
+        theme: 'snow'
+     });
+     const form = document.querySelector('#form');
+     form.onsubmit = function () {
+        const contentInput = document.querySelector('input[name=content]');
+        contentInput.value = quill.root.innerHTML;
+
+     };
+</script>
 @endsection

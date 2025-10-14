@@ -13,7 +13,8 @@ class PostsController extends Controller
     }
 
     public function index(){
-        return view('admin.posts');
+        $posts = Post::all();
+        return view('admin.posts')->with('posts', $posts);
     }
 
     public function showAdd(){
