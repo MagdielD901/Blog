@@ -59,7 +59,7 @@
 
 @section("scripts")
 <script>
-     const quill = new Quill('editor', {
+     const quill = new Quill('#editor', {
         theme: 'snow'
      });
      const form = document.querySelector('#form');
